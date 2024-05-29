@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //deboundcing 
+        let timeout;
+        function debouncePopulateDiv(){
+            //how do you cancel a clock?
+            //clearTimeout
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){
+                populateDiv()
+            }, 1000)
+        }
+
+        function populateDiv(){
+            const a = document.getElementById("firstNumber").value;
+            const b = document.getElementById("secondNumber").value;
+            //const element = document.getElementById("finalSum");
+            fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b)
+                .then(function(response){
+                    response.text()
+                        .then(function(ans){
+                            document.getElementById("finalSum").innerHTML = ans;
+                        })
+                })
+            //element.innerHTML = parseInt(a) + parseInt(b);
+        }
+
+        //cleaner way to write the above function
+        //async function populateDiv2(){
+           // const a = document.getElementById("firstNumber").value;
+            //const b = document.getElementById("secondNumber").value;
+
+            //const response = await fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b)
+            //const ans = await response.text();
+            //document.getElementById("finalSum").innerHTML = ans;
+        //}
+
+
+    </script>
+    <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="First Number"><br><br>
+    <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="Second Number"><br><br>
+    <!-- <button onclick="populateDiv()">Calculate sum</button> -->
+    <div id="finalSum"></div>
+</body>
+</html>
