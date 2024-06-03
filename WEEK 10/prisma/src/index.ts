@@ -9,7 +9,36 @@ async function insertUser(email: string, password: string, firstName: string, la
             password,
             firstName,
             lastName
+        },
+        select:{
+            id: true,
+            password: true
         }
     })
     console.log(res)
 }
+insertUser("syedahmedullahjaser@gmail.com", "password", "Jaser", "Syed")
+
+interface UpdateParams {
+    firstName: string;
+    lastName: string;
+}
+
+async function updateUser(username: string, {
+    firstName,
+    lastName
+}: UpdateParams) {
+  const res = await prisma.user.update({
+    where: { username },
+    data: {
+      firstName,
+      lastName
+    }
+  });
+  console.log(res);
+}
+
+updateUser("admin1", {
+    firstName: "new name",
+    lastName: "singh"
+})
