@@ -1,8 +1,12 @@
 import React from 'react'
+import SharedComponent from './SharedComponent'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div>
+        Landing
+        <SharedComponent />
+    </div>
   )
 }
 

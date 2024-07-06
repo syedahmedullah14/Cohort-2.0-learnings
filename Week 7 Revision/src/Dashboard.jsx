@@ -1,8 +1,12 @@
 import React from 'react'
+import SharedComponent from './SharedComponent'
 
 export const Dashbaord = () => {
   return (
-    <div>Dashbaord</div>
+    <div>
+      Dashbaord
+      <SharedComponent />
+    </div>
   )
 }
 
