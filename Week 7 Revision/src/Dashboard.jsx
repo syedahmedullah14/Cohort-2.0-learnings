@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dashbaord = () => {
+export const Dashbaord = () => {
   return (
     <div>Dashbaord</div>
   )
