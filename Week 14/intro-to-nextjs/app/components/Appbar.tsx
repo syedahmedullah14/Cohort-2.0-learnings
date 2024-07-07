@@ -4,7 +4,7 @@
 // import { useBlogs } from "../hooks";
 
 import Link from "next/link";
-import Signin from "../signin/page";
+import Signin from "../auth/signin/page";
 
 
 export const Appbar = () => {
