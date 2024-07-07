@@ -4,8 +4,6 @@
 // import Landing from './Landing';
 // import Dashboard from './Dashboard';
 
-import { Suspense } from 'react';
-
 // const App = () => {
 //   const navigate = useNavigate();
 
@@ -38,17 +36,19 @@ import { Suspense } from 'react';
 
 // export default App;
 
-import React, { Suspense } from 'react';
+// Lazy laoding
 
-const MyLazyComponent = React.lazy(() => import('./MyComponent'));
+// import React, { Suspense } from 'react';
 
-function App() {
-  return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <MyLazyComponent />
-      </Suspense>
-    </div>
-  );
-}
+// const MyLazyComponent = React.lazy(() => import('./MyComponent'));
+
+// function App() {
+//   return (
+//     <div>
+//       <Suspense fallback={<div>Loading...</div>}>
+//         <MyLazyComponent />
+//       </Suspense>
+//     </div>
+//   );
+// }
 
