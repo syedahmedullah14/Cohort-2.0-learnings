@@ -13,6 +13,10 @@ export async function POST(req: NextRequest){
     //extract body
     const body = await req.json();
     console.log(body);
+
+    return Response.json({
+        message: "You are logged in"
+    })
     
 }
 
