@@ -1,7 +1,7 @@
 export function GET(){
     //database logic
     return Response.json({
-        username: "jaser@gmail.com",
+        email: "jaser@gmail.com",
         name: "Jaser"
     })
 }
@@ -9,7 +9,7 @@ export function GET(){
 export function POST(){
     //database logic
     return Response.json({
-        username: "jaser@gmail.com",
+        email: "jaser@gmail.com",
         name: "Jaser"
     })
 }
@@ -17,7 +17,7 @@ export function POST(){
 export function PUT(){
     //database logic
     return Response.json({
-        username: "jaser@gmail.com",
+        email: "jaser@gmail.com",
         name: "Jaser"
     })
 }
